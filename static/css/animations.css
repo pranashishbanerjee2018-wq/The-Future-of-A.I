@@ -1,0 +1,435 @@
+/* ==============================================================================
+   THE FUTURE OF ARTIFICIAL INTELLIGENCE
+   2D Vector Animations, Phoneme Lip-Sync & Natural Gestures
+   File: static/css/animations.css
+   ============================================================================== */
+
+/* Camera Movements across Scenes */
+.cam-default {
+  transform: scale(1) translate(0, 0);
+}
+
+.cam-zoom-in {
+  transform: scale(1.08) translate(0, -2%);
+}
+
+.cam-neural-focus {
+  transform: scale(1.12) translate(-3%, -4%);
+}
+
+.cam-two-shot {
+  transform: scale(1.05) translate(0, -1%);
+}
+
+.cam-matlab-workstation {
+  transform: scale(1.18) translate(0, 4%);
+}
+
+.cam-future-tech {
+  transform: scale(1.10) translate(4%, -3%);
+}
+
+.cam-close-reflection {
+  transform: scale(1.15) translate(0, -3%);
+}
+
+.cam-cinematic-wide {
+  transform: scale(1.02) translate(0, 0);
+}
+
+/* ==============================================================================
+   1. REAL-TIME PHONEME MOUTH SYSTEM
+   ============================================================================== */
+
+/* Default State: Closed Resting Mouth */
+.mouth-group .mouth-shape-rest { display: block; }
+.mouth-group .mouth-shape-open { display: none; }
+.mouth-group .mouth-shape-round { display: none; }
+.mouth-group .mouth-shape-wide { display: none; }
+.mouth-group .mouth-shape-mid { display: none; }
+
+/* Active Phoneme Visibility */
+.mouth-group.phoneme-open .mouth-shape-rest { display: none !important; }
+.mouth-group.phoneme-open .mouth-shape-open { display: block !important; }
+
+.mouth-group.phoneme-round .mouth-shape-rest { display: none !important; }
+.mouth-group.phoneme-round .mouth-shape-round { display: block !important; }
+
+.mouth-group.phoneme-wide .mouth-shape-rest { display: none !important; }
+.mouth-group.phoneme-wide .mouth-shape-wide { display: block !important; }
+
+.mouth-group.phoneme-mid .mouth-shape-rest { display: none !important; }
+.mouth-group.phoneme-mid .mouth-shape-mid { display: block !important; }
+
+.mouth-group.phoneme-rest .mouth-shape-rest { display: block !important; }
+.mouth-group.phoneme-rest .mouth-shape-open { display: none !important; }
+.mouth-group.phoneme-rest .mouth-shape-round { display: none !important; }
+.mouth-group.phoneme-rest .mouth-shape-wide { display: none !important; }
+.mouth-group.phoneme-rest .mouth-shape-mid { display: none !important; }
+
+/* Fallback Continuous Lip-Sync when Speech boundary events are unavailable */
+.active-speaker.fallback-lip-sync .mouth-group {
+  animation: dynamicPhonemeCycle 0.22s ease-in-out infinite alternate;
+}
+
+@keyframes dynamicPhonemeCycle {
+  0% { transform: scaleY(0.7) translateY(0px); }
+  50% { transform: scaleY(1.9) translateY(1px); }
+  100% { transform: scaleY(1.3) translateY(0.5px); }
+}
+
+/* Listening Character: Strictly Closed Mouth */
+.character-slot.listening .mouth-group .mouth-shape-rest {
+  display: block !important;
+}
+.character-slot.listening .mouth-group .mouth-shape-open,
+.character-slot.listening .mouth-group .mouth-shape-round,
+.character-slot.listening .mouth-group .mouth-shape-wide,
+.character-slot.listening .mouth-group .mouth-shape-mid {
+  display: none !important;
+}
+
+/* ==============================================================================
+   2. NATURAL HAND AND ARM GESTURES
+   ============================================================================== */
+
+/* Transform Pivot Origins for Articulated Joints */
+#senior-right-arm {
+  transform-origin: 295px 245px;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#senior-right-forearm {
+  transform-origin: 345px 340px;
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#senior-right-hand {
+  transform-origin: 365px 420px;
+  transition: transform 0.45s ease;
+}
+
+#senior-left-arm {
+  transform-origin: 145px 240px;
+  transition: transform 0.6s ease;
+}
+
+#junior-right-arm {
+  transform-origin: 285px 250px;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#junior-right-forearm {
+  transform-origin: 315px 365px;
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#junior-right-hand {
+  transform-origin: 305px 435px;
+  transition: transform 0.45s ease;
+}
+
+#junior-left-arm {
+  transform-origin: 160px 245px;
+  transition: transform 0.6s ease;
+}
+
+/* Senior Researcher (Dr. Alexander Thorne) Gesture Variations */
+#senior-right-arm.gesture-welcome {
+  transform: rotate(-16deg) translateY(-4px);
+}
+#senior-right-arm.gesture-welcome #senior-right-forearm {
+  transform: rotate(-14deg);
+}
+#senior-right-arm.gesture-welcome #senior-right-hand {
+  transform: rotate(10deg);
+}
+
+#senior-right-arm.gesture-present-screen,
+#senior-right-arm.gesture-point-graph {
+  transform: rotate(-28deg) translateY(-8px);
+}
+#senior-right-arm.gesture-present-screen #senior-right-forearm,
+#senior-right-arm.gesture-point-graph #senior-right-forearm {
+  transform: rotate(-20deg);
+}
+#senior-right-arm.gesture-present-screen #senior-right-hand,
+#senior-right-arm.gesture-point-graph #senior-right-hand {
+  transform: rotate(-12deg);
+  animation: subtlePointSway 3s ease-in-out infinite alternate;
+}
+
+#senior-right-arm.gesture-open-palm {
+  transform: rotate(-22deg) translateY(-6px);
+}
+#senior-right-arm.gesture-open-palm #senior-right-forearm {
+  transform: rotate(-18deg);
+}
+#senior-right-arm.gesture-open-palm #senior-right-hand {
+  transform: rotate(16deg);
+}
+#char-senior-container.active-speaker #senior-left-arm.gesture-open-palm-left {
+  transform: rotate(-8deg);
+}
+
+#senior-right-arm.gesture-sweeping-hand {
+  animation: seniorSweepingVision 3.6s ease-in-out infinite alternate;
+}
+
+@keyframes seniorSweepingVision {
+  0% { transform: rotate(-14deg) translateY(-4px); }
+  50% { transform: rotate(-26deg) translateY(-10px); }
+  100% { transform: rotate(-18deg) translateY(-6px); }
+}
+
+#senior-right-arm.gesture-firm-hand {
+  transform: rotate(-12deg) translateY(-3px);
+}
+#senior-right-arm.gesture-firm-hand #senior-right-forearm {
+  transform: rotate(-10deg);
+}
+#senior-right-arm.gesture-firm-hand #senior-right-hand {
+  transform: rotate(6deg);
+}
+
+#senior-right-arm.gesture-warm-close {
+  transform: rotate(-15deg);
+}
+#senior-right-arm.gesture-warm-close #senior-right-hand {
+  transform: rotate(8deg);
+}
+
+#senior-right-arm.gesture-emphasize {
+  animation: gestureEmphasizePulse 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes gestureEmphasizePulse {
+  0% { transform: rotate(-8deg); }
+  50% { transform: rotate(-18deg) translateY(-4px); }
+  100% { transform: rotate(-10deg); }
+}
+
+@keyframes subtlePointSway {
+  0% { transform: rotate(-12deg); }
+  100% { transform: rotate(-8deg) translateY(-2px); }
+}
+
+/* Junior Researcher (Marcus Vance) Gesture Variations */
+#junior-right-arm.gesture-inquire {
+  transform: rotate(-24deg) translateY(-6px);
+}
+#junior-right-arm.gesture-inquire #junior-right-forearm {
+  transform: rotate(-18deg);
+}
+#junior-right-arm.gesture-inquire #junior-right-hand {
+  transform: rotate(-12deg);
+}
+
+#junior-right-arm.gesture-point-tablet {
+  transform: rotate(12deg) translateY(-2px);
+}
+#junior-right-arm.gesture-point-tablet #junior-right-forearm {
+  transform: rotate(-14deg);
+}
+#junior-right-arm.gesture-point-tablet #junior-right-hand {
+  transform: rotate(-16deg);
+}
+
+#junior-right-arm.gesture-highlight-hud {
+  transform: rotate(-28deg) translateY(-8px);
+}
+#junior-right-arm.gesture-highlight-hud #junior-right-forearm {
+  transform: rotate(-12deg);
+}
+#junior-right-arm.gesture-highlight-hud #junior-right-hand {
+  transform: rotate(-10deg);
+}
+
+#junior-right-arm.gesture-tap-console {
+  animation: juniorConsoleTap 2.5s ease-in-out infinite;
+}
+
+@keyframes juniorConsoleTap {
+  0%, 100% { transform: rotate(10deg); }
+  25% { transform: rotate(14deg) translateY(4px); }
+  35% { transform: rotate(8deg) translateY(-2px); }
+  50% { transform: rotate(14deg) translateY(4px); }
+  65% { transform: rotate(10deg); }
+}
+
+#junior-right-arm.gesture-nod-affirm {
+  transform: rotate(-14deg);
+}
+#junior-right-arm.gesture-nod-affirm #junior-right-hand {
+  transform: rotate(-8deg);
+}
+
+#junior-right-arm.gesture-caution {
+  transform: rotate(-20deg) translateY(-5px);
+}
+#junior-right-arm.gesture-caution #junior-right-forearm {
+  transform: rotate(-16deg);
+}
+#junior-right-arm.gesture-caution #junior-right-hand {
+  transform: rotate(18deg); /* Palm facing forward / caution */
+}
+
+#junior-right-arm.gesture-thoughtful {
+  transform: rotate(-24deg) translateY(-4px);
+}
+#junior-right-arm.gesture-thoughtful #junior-right-forearm {
+  transform: rotate(-24deg);
+}
+#junior-right-arm.gesture-thoughtful #junior-right-hand {
+  transform: rotate(-15deg);
+}
+
+/* Resting State for Arms (Default) */
+.arm-joint-right.gesture-rest,
+.arm-joint-left.gesture-rest {
+  transform: rotate(0deg) translateY(0px) !important;
+}
+.arm-joint-right.gesture-rest .forearm-joint-right,
+.arm-joint-right.gesture-rest .hand-joint-right {
+  transform: rotate(0deg) translateY(0px) !important;
+}
+
+/* ==============================================================================
+   3. NATURAL BODY LANGUAGE & LISTENING REACTIONS
+   ============================================================================== */
+
+/* Subtle Idle Breathing (Torso & Body) */
+.character-svg-wrapper {
+  animation: characterBreathing 4.5s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+#char-junior-container .character-svg-wrapper {
+  animation-delay: -2.25s; /* Desynchronize characters so they breathe naturally */
+}
+
+@keyframes characterBreathing {
+  0% { transform: translateY(0px) scale(1, 1); }
+  100% { transform: translateY(-4px) scale(1.006, 1.012); }
+}
+
+/* Natural Eye Blinking */
+.character-eyes {
+  animation: naturalBlink 4.2s infinite;
+  transform-origin: 222.5px 136px;
+}
+
+#junior-eyes {
+  animation-delay: -2.1s;
+}
+
+@keyframes naturalBlink {
+  0%, 94%, 98%, 100% { transform: scaleY(1); }
+  96% { transform: scaleY(0.08); }
+}
+
+/* Active Speaker Head Motion (Phrasing Emphasis) */
+.character-slot.active-speaker .head-joint {
+  animation: speakingHeadEmphasis 3.2s ease-in-out infinite alternate;
+  transform-origin: 222.5px 220px;
+}
+
+@keyframes speakingHeadEmphasis {
+  0% { transform: rotate(-1.2deg) translateY(-0.5px); }
+  50% { transform: rotate(0.6deg) translateY(0.5px); }
+  100% { transform: rotate(1.4deg) translateY(-0.8px); }
+}
+
+/* Listening Character Subtle Reaction Nods */
+.character-slot.listening .head-joint {
+  animation: listeningColleagueNod 4.2s ease-in-out infinite;
+  transform-origin: 222.5px 220px;
+}
+
+#char-junior-container.character-slot.listening .head-joint {
+  animation-delay: -1.5s;
+}
+
+@keyframes listeningColleagueNod {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(1.8deg) translateY(1.2px); }
+  42% { transform: rotate(0.4deg); }
+  68% { transform: rotate(1.5deg) translateY(0.9px); }
+  80% { transform: rotate(0deg); }
+}
+
+/* Inquisitive Head Tilt for Junior Researcher */
+#junior-head-group.head-tilt-inquire {
+  transform: rotate(3deg) translateY(-1px);
+}
+
+/* ==============================================================================
+   4. PRESENTATION CONTROLS (PAUSE / RESUME)
+   ============================================================================== */
+
+/* When Presentation is Paused, freeze all running animations */
+#presentation-viewport.presentation-paused * {
+  animation-play-state: paused !important;
+}
+
+/* Subtitle Audio Wave Bar Animation */
+.active-speaker ~ #dialogue-subtitles-bar .speech-audio-indicator .wave-bar {
+  animation: soundWaveBounce 0.4s ease-in-out infinite alternate;
+}
+
+.wb-1 { animation-delay: 0.0s; }
+.wb-2 { animation-delay: 0.1s; }
+.wb-3 { animation-delay: 0.2s; }
+.wb-4 { animation-delay: 0.3s; }
+
+@keyframes soundWaveBounce {
+  0% { height: 3px; }
+  100% { height: 16px; }
+}
+
+/* Neural Network Node Signal Propagation */
+.pulse-c1 { animation: signalPulse 1.8s infinite 0.0s; }
+.pulse-c2 { animation: signalPulse 1.8s infinite 0.4s; }
+.pulse-c3 { animation: signalPulse 1.8s infinite 0.8s; }
+.pulse-c4 { animation: signalPulse 1.8s infinite 1.2s; }
+
+@keyframes signalPulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.35); opacity: 1; }
+}
+
+/* Server Rack LED Flashes */
+.server-leds circle:nth-child(odd) {
+  animation: ledBlink 1.4s infinite alternate;
+}
+.server-leds circle:nth-child(even) {
+  animation: ledBlink 0.9s infinite alternate;
+}
+
+@keyframes ledBlink {
+  0%, 70% { opacity: 1; }
+  75%, 100% { opacity: 0.2; }
+}
+
+/* Spinning MATLAB Gear */
+.spinner-icon {
+  display: inline-block;
+  animation: spinGear 2s linear infinite;
+}
+
+@keyframes spinGear {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Orbiting Nodes in Future AI Hologram */
+.orbit-node {
+  animation: floatOrbit 4s ease-in-out infinite alternate;
+}
+.node-b { animation-delay: -1.3s; }
+.node-c { animation-delay: -2.6s; }
+
+@keyframes floatOrbit {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
+}

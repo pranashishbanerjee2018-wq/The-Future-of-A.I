@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800" width="100%" height="100%" id="svg-junior">
+  <defs>
+    <linearGradient id="hairGradB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#402e1c"/>
+      <stop offset="100%" stop-color="#24180d"/>
+    </linearGradient>
+    <linearGradient id="skinGradB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbe0cb"/>
+      <stop offset="100%" stop-color="#e8c2a7"/>
+    </linearGradient>
+    <linearGradient id="shirtGradB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2979ff"/>
+      <stop offset="60%" stop-color="#1565c0"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+    <linearGradient id="tabletGlassB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2979ff" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="juniorGlowB" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#00e5ff" flood-opacity="0.6"/>
+    </filter>
+    <filter id="charShadowB" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g id="character-b-root" filter="url(#charShadowB)">
+    <!-- Lower Body / Trousers & Casual Boots -->
+    <g id="junior-legs">
+      <path d="M 180 490 L 175 760 L 212 760 L 220 520 L 228 520 L 235 760 L 272 760 L 268 490 Z" fill="#141a24" stroke="#080c12" stroke-width="1.5"/>
+      <path d="M 165 755 L 216 755 L 216 778 L 160 778 Z" fill="#1a1c22"/>
+      <path d="M 230 755 L 282 755 L 286 778 L 230 778 Z" fill="#1a1c22"/>
+    </g>
+
+    <!-- Torso & Blue Professional Shirt -->
+    <g id="junior-torso">
+      <path d="M 155 240 C 155 240, 222 228, 290 240 C 308 310, 312 410, 305 500 C 305 500, 222 515, 140 500 C 135 410, 142 310, 155 240 Z" fill="url(#shirtGradB)" stroke="#1565c0" stroke-width="1.8"/>
+      
+      <!-- Collar -->
+      <polygon points="190,230 222,260 210,265 180,240" fill="#1e88e5" stroke="#0d47a1" stroke-width="1.2"/>
+      <polygon points="255,230 222,260 234,265 265,240" fill="#1e88e5" stroke="#0d47a1" stroke-width="1.2"/>
+
+      <!-- Placket and Buttons -->
+      <line x1="222" y1="260" x2="222" y2="495" stroke="#0d47a1" stroke-width="2"/>
+      <circle cx="222" cy="285" r="2.5" fill="#ffffff" opacity="0.8"/>
+      <circle cx="222" cy="335" r="2.5" fill="#ffffff" opacity="0.8"/>
+      <circle cx="222" cy="385" r="2.5" fill="#ffffff" opacity="0.8"/>
+      <circle cx="222" cy="435" r="2.5" fill="#ffffff" opacity="0.8"/>
+    </g>
+
+    <!-- Arms & Articulable Tablet/Stylus Gestures -->
+    <g id="junior-arms-container">
+      <!-- Left Arm (Holding Digital Tablet) -->
+      <g id="junior-left-arm" class="tablet-arm-group">
+        <path d="M 155 245 C 130 310, 125 365, 140 430 L 165 425 C 155 375, 158 325, 175 255 Z" fill="url(#shirtGradB)" stroke="#1565c0" stroke-width="1.5"/>
+        <!-- Rolled cuff -->
+        <ellipse cx="140" cy="425" rx="14" ry="7" fill="#1e88e5"/>
+        <!-- Forearm & Hand holding tablet -->
+        <path d="M 135 430 L 185 450 L 195 440 L 145 420 Z" fill="url(#skinGradB)"/>
+        <ellipse cx="190" cy="450" rx="12" ry="10" fill="url(#skinGradB)"/>
+
+        <!-- Holographic Tablet in Marcus's Hands -->
+        <g id="hologram-tablet" transform="translate(170, 400)">
+          <polygon points="0,20 80,0 85,60 5,80" fill="url(#tabletGlassB)" stroke="#00e5ff" stroke-width="1.5" filter="url(#juniorGlowB)"/>
+          <!-- Mini Line Graphs on Tablet -->
+          <polyline points="15,45 35,32 55,48 75,25" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+        </g>
+      </g>
+
+      <!-- Right Arm (Gestural Arm: Shoulder, Forearm, Wrist & Stylus Pen) -->
+      <g id="junior-right-arm" class="arm-joint-right">
+        <!-- Upper Arm with rolled sleeve -->
+        <path d="M 290 245 C 312 295, 322 340, 324 365 L 298 370 C 295 340, 288 300, 275 255 Z" fill="url(#shirtGradB)" stroke="#1565c0" stroke-width="1.5"/>
+        <!-- Rolled cuff -->
+        <ellipse cx="310" cy="368" rx="14" ry="7" fill="#1e88e5"/>
+
+        <!-- Forearm & Stylus Hand Pivot from Elbow (315, 365) -->
+        <g id="junior-right-forearm" class="forearm-joint-right">
+          <!-- Forearm skin -->
+          <path d="M 312 370 C 318 395, 322 420, 320 435 L 296 432 C 298 415, 298 390, 296 372 Z" fill="url(#skinGradB)"/>
+          
+          <!-- Wrist & Hand Pivot from (305, 435) -->
+          <g id="junior-right-hand" class="hand-joint-right">
+            <ellipse cx="308" cy="442" rx="12" ry="14" fill="url(#skinGradB)"/>
+            <!-- Stylus Pen in Right Hand -->
+            <line id="junior-stylus" x1="285" y1="455" x2="250" y2="440" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" filter="url(#juniorGlowB)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Head, Neck, Face & Hair (23-year-old Junior Researcher) -->
+    <g id="junior-head-group" class="head-joint">
+      <polygon points="208,205 237,205 242,238 203,238" fill="url(#skinGradB)"/>
+
+      <!-- Head Base -->
+      <path d="M 188 135 C 188 80, 257 80, 257 135 C 257 175, 248 215, 222.5 215 C 197 215, 188 175, 188 135 Z" fill="url(#skinGradB)" stroke="#d9b193" stroke-width="1"/>
+
+      <!-- Ears -->
+      <ellipse cx="187" cy="146" rx="6.5" ry="11" fill="url(#skinGradB)"/>
+      <ellipse cx="258" cy="146" rx="6.5" ry="11" fill="url(#skinGradB)"/>
+
+      <!-- Modern Textured Hair (Youthful, energetic) -->
+      <path d="M 182 125 C 178 72, 220 52, 262 68 C 275 75, 272 105, 266 122 C 258 90, 242 78, 215 80 C 196 82, 188 102, 182 125 Z" fill="url(#hairGradB)"/>
+      <path d="M 185 110 C 205 75, 250 70, 268 90" stroke="#523c26" stroke-width="2.2" fill="none"/>
+
+      <!-- Eyebrows (Curious, inquisitive lift on right brow) -->
+      <path d="M 197 127 Q 207 124 217 127" stroke="#402e1c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+      <path d="M 228 125 Q 238 119 248 123" stroke="#402e1c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+      <!-- Expressive Analytical Eyes -->
+      <g id="junior-eyes" class="character-eyes">
+        <ellipse cx="207" cy="138" rx="6" ry="4.5" fill="#ffffff"/>
+        <circle cx="207.5" cy="138" r="3" fill="#1b4570"/>
+        <circle cx="209" cy="136.5" r="1.2" fill="#ffffff"/>
+
+        <ellipse cx="238" cy="138" rx="6" ry="4.5" fill="#ffffff"/>
+        <circle cx="237.5" cy="138" r="3" fill="#1b4570"/>
+        <circle cx="239" cy="136.5" r="1.2" fill="#ffffff"/>
+      </g>
+
+      <!-- Nose -->
+      <path d="M 222.5 138 L 221 157 L 226 157" stroke="#bf9473" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+
+      <!-- 5-State Phoneme-Synchronized Mouth System -->
+      <g id="junior-mouth" class="mouth-group phoneme-rest">
+        <!-- 1. Rest / Closed (M, B, P, silence) -->
+        <path class="mouth-shape-rest" d="M 214 176 Q 222.5 179 231 176" stroke="#a86355" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+        <!-- 2. Open / Ah (A, broad vowels, stressed syllables) -->
+        <g class="mouth-shape-open">
+          <path d="M 213 173 Q 222.5 169 232 173 C 234 186, 211 186, 213 173 Z" fill="#3a1010" stroke="#a86355" stroke-width="1.8"/>
+          <path d="M 215.5 173 Q 222.5 175 229.5 173" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <ellipse cx="222.5" cy="182" rx="4.5" ry="1.8" fill="#882222" opacity="0.8"/>
+        </g>
+
+        <!-- 3. Round / Oh / Oo (O, U, W, rounded pursed lips) -->
+        <g class="mouth-shape-round">
+          <ellipse cx="222.5" cy="177" rx="6.2" ry="7.2" fill="#3a1010" stroke="#a86355" stroke-width="2"/>
+          <ellipse cx="222.5" cy="174" rx="3.8" ry="1.5" fill="#ffffff" opacity="0.9"/>
+        </g>
+
+        <!-- 4. Wide / Eh / Ee (E, I, Y, consonants with teeth) -->
+        <g class="mouth-shape-wide">
+          <path d="M 212 175 Q 222.5 172 233 175 C 234 181, 211 181, 212 175 Z" fill="#3a1010" stroke="#a86355" stroke-width="1.8"/>
+          <line x1="215" y1="175" x2="230" y2="175" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        </g>
+
+        <!-- 5. Mid / Intermediate (T, S, D, L, N, unstressed vowels) -->
+        <g class="mouth-shape-mid">
+          <path d="M 214 174 Q 222.5 172 231 174 C 232 180, 213 180, 214 174 Z" fill="#3a1010" stroke="#a86355" stroke-width="1.8"/>
+          <line x1="216" y1="174.5" x2="229" y2="174.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

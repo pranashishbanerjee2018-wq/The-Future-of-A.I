@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800" width="100%" height="100%" id="svg-senior">
+  <defs>
+    <linearGradient id="hairGradA" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a231d"/>
+      <stop offset="100%" stop-color="#14100c"/>
+    </linearGradient>
+    <linearGradient id="skinGradA" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8d5bb"/>
+      <stop offset="100%" stop-color="#e2ba9b"/>
+    </linearGradient>
+    <linearGradient id="coatGradA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#152238"/>
+      <stop offset="50%" stop-color="#0f1929"/>
+      <stop offset="100%" stop-color="#090f19"/>
+    </linearGradient>
+    <linearGradient id="lapelGradA" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3252"/>
+      <stop offset="100%" stop-color="#111d30"/>
+    </linearGradient>
+    <filter id="charShadowA" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g id="character-a-root" filter="url(#charShadowA)">
+    <!-- Lower Body / Trousers & Shoes -->
+    <g id="senior-legs">
+      <path d="M 175 480 L 170 760 L 210 760 L 218 510 L 226 510 L 235 760 L 275 760 L 270 480 Z" fill="#0d141f" stroke="#060a10" stroke-width="1.5"/>
+      <!-- Shoes -->
+      <path d="M 160 755 L 215 755 L 215 778 L 155 778 Z" fill="#05070a"/>
+      <path d="M 230 755 L 285 755 L 290 778 L 230 778 Z" fill="#05070a"/>
+    </g>
+
+    <!-- Torso & Navy Lab Attire -->
+    <g id="senior-torso">
+      <!-- Dark Navy Professional Lab Coat -->
+      <path d="M 140 230 C 140 230, 220 215, 305 230 C 325 310, 335 410, 330 520 C 330 520, 220 540, 115 520 C 110 410, 120 310, 140 230 Z" fill="url(#coatGradA)" stroke="#1f375b" stroke-width="1.8"/>
+      
+      <!-- Inner Shirt & Tie -->
+      <path d="M 195 225 L 250 225 L 235 320 L 210 320 Z" fill="#eaf0f8"/>
+      <!-- Silk Navy Tie -->
+      <polygon points="218,235 227,235 231,315 222.5,335 214,315" fill="#0055aa" stroke="#003366" stroke-width="1"/>
+
+      <!-- Coat Lapels -->
+      <polygon points="175,225 215,350 185,360 155,240" fill="url(#lapelGradA)" stroke="#264470" stroke-width="1.2"/>
+      <polygon points="270,225 230,350 260,360 290,240" fill="url(#lapelGradA)" stroke="#264470" stroke-width="1.2"/>
+
+      <!-- Digital Lab Access Badge -->
+      <g transform="translate(155, 290)">
+        <rect width="28" height="42" rx="3" fill="#071224" stroke="#00d4ff" stroke-width="1"/>
+        <rect x="4" y="5" width="20" height="15" fill="#00d4ff" opacity="0.6"/>
+        <line x1="4" y1="26" x2="24" y2="26" stroke="#ffffff" stroke-width="1.2"/>
+        <line x1="4" y1="32" x2="18" y2="32" stroke="#ffffff" stroke-width="1"/>
+      </g>
+    </g>
+
+    <!-- Arms & Articulable Gestures -->
+    <g id="senior-arms-container">
+      <!-- Left Arm (Resting or supporting gesture) -->
+      <g id="senior-left-arm" class="arm-joint-left">
+        <path d="M 140 240 C 115 320, 105 380, 115 440 L 140 440 C 130 380, 138 320, 158 250 Z" fill="url(#coatGradA)" stroke="#1f375b" stroke-width="1.5"/>
+        <g id="senior-left-hand" class="hand-joint-left">
+          <ellipse cx="125" cy="455" rx="14" ry="16" fill="url(#skinGradA)"/>
+        </g>
+      </g>
+
+      <!-- Right Arm (Primary Gestural Arm: Shoulder, Forearm, Wrist & Palm) -->
+      <g id="senior-right-arm" class="arm-joint-right">
+        <!-- Upper Arm from Shoulder -->
+        <path d="M 305 240 C 330 290, 345 330, 350 350 L 325 358 C 320 330, 310 290, 290 255 Z" fill="url(#coatGradA)" stroke="#1f375b" stroke-width="1.5"/>
+        
+        <!-- Forearm & Hand Pivot from Elbow (340, 340) -->
+        <g id="senior-right-forearm" class="forearm-joint-right">
+          <!-- Forearm sleeve -->
+          <path d="M 350 350 C 362 385, 372 415, 375 422 L 350 432 C 345 415, 335 385, 325 358 Z" fill="url(#coatGradA)" stroke="#1f375b" stroke-width="1.5"/>
+          <!-- Sleeve Cuff -->
+          <ellipse cx="362" cy="425" rx="14" ry="7" fill="#1e3252"/>
+
+          <!-- Hand & Articulated Fingers Pivot from Wrist (365, 420) -->
+          <g id="senior-right-hand" class="hand-joint-right">
+            <!-- Palm Base -->
+            <ellipse cx="370" cy="432" rx="12" ry="14" fill="url(#skinGradA)"/>
+            <!-- Thumb -->
+            <path d="M 360 426 Q 352 422 350 416 Q 354 412 362 420 Z" fill="url(#skinGradA)"/>
+            <!-- Index Finger (Subtle pointing / open gesture) -->
+            <path id="senior-finger-index" d="M 367 422 L 372 398 Q 375 396 378 398 L 375 422 Z" fill="url(#skinGradA)"/>
+            <!-- Middle Finger -->
+            <path id="senior-finger-middle" d="M 374 423 L 380 400 Q 383 398 386 400 L 381 424 Z" fill="url(#skinGradA)"/>
+            <!-- Ring & Pinky -->
+            <path id="senior-finger-ring" d="M 379 425 L 386 406 Q 389 405 391 408 L 385 427 Z" fill="url(#skinGradA)"/>
+            <path id="senior-finger-pinky" d="M 383 428 L 391 414 Q 393 413 394 416 L 387 431 Z" fill="url(#skinGradA)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Head, Neck, Face & Hair (30-year-old Senior Researcher) -->
+    <g id="senior-head-group" class="head-joint">
+      <!-- Neck -->
+      <polygon points="205,200 240,200 245,235 200,235" fill="url(#skinGradA)"/>
+
+      <!-- Head Base -->
+      <path d="M 185 130 C 185 75, 260 75, 260 130 C 260 175, 250 215, 222.5 215 C 195 215, 185 175, 185 130 Z" fill="url(#skinGradA)" stroke="#cfa687" stroke-width="1"/>
+      
+      <!-- Ears -->
+      <ellipse cx="184" cy="142" rx="7" ry="12" fill="url(#skinGradA)"/>
+      <ellipse cx="261" cy="142" rx="7" ry="12" fill="url(#skinGradA)"/>
+
+      <!-- Styled Professional Hair -->
+      <path d="M 180 120 C 175 70, 220 50, 260 65 C 275 72, 270 100, 265 115 C 255 85, 235 75, 205 85 C 190 90, 185 105, 180 120 Z" fill="url(#hairGradA)"/>
+      <path d="M 180 105 C 195 70, 245 60, 265 80" stroke="#3d322a" stroke-width="2.5" fill="none"/>
+
+      <!-- Eyebrows (Calm, confident, intelligent) -->
+      <path d="M 195 125 Q 206 122 216 126" stroke="#2a231d" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+      <path d="M 229 126 Q 239 122 250 125" stroke="#2a231d" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+
+      <!-- Eyes with Blinking Animation -->
+      <g id="senior-eyes" class="character-eyes">
+        <ellipse cx="206" cy="136" rx="6" ry="4.5" fill="#ffffff"/>
+        <circle cx="206.5" cy="136" r="3" fill="#302015"/>
+        <circle cx="208" cy="134.5" r="1.2" fill="#ffffff"/>
+
+        <ellipse cx="239" cy="136" rx="6" ry="4.5" fill="#ffffff"/>
+        <circle cx="238.5" cy="136" r="3" fill="#302015"/>
+        <circle cx="240" cy="134.5" r="1.2" fill="#ffffff"/>
+      </g>
+
+      <!-- Nose -->
+      <path d="M 222.5 136 L 220 156 L 226 156" stroke="#b88f70" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+      <!-- 5-State Phoneme-Synchronized Mouth System -->
+      <g id="senior-mouth" class="mouth-group phoneme-rest">
+        <!-- 1. Rest / Closed (M, B, P, silence) -->
+        <path class="mouth-shape-rest" d="M 213 175 Q 222.5 178 232 175" stroke="#9e5b4f" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+        <!-- 2. Open / Ah (A, broad vowels, stressed syllables) -->
+        <g class="mouth-shape-open">
+          <path d="M 212 172 Q 222.5 168 233 172 C 235 186, 210 186, 212 172 Z" fill="#3a1010" stroke="#9e5b4f" stroke-width="1.8"/>
+          <path d="M 215 172 Q 222.5 174 230 172" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <ellipse cx="222.5" cy="182" rx="5" ry="2" fill="#882222" opacity="0.8"/>
+        </g>
+
+        <!-- 3. Round / Oh / Oo (O, U, W, rounded pursed lips) -->
+        <g class="mouth-shape-round">
+          <ellipse cx="222.5" cy="176" rx="6.5" ry="7.5" fill="#3a1010" stroke="#9e5b4f" stroke-width="2"/>
+          <ellipse cx="222.5" cy="173" rx="4" ry="1.5" fill="#ffffff" opacity="0.9"/>
+        </g>
+
+        <!-- 4. Wide / Eh / Ee (E, I, Y, consonants with teeth) -->
+        <g class="mouth-shape-wide">
+          <path d="M 211 174 Q 222.5 171 234 174 C 235 180, 210 180, 211 174 Z" fill="#3a1010" stroke="#9e5b4f" stroke-width="1.8"/>
+          <line x1="214" y1="174" x2="231" y2="174" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        </g>
+
+        <!-- 5. Mid / Intermediate (T, S, D, L, N, unstressed vowels) -->
+        <g class="mouth-shape-mid">
+          <path d="M 213 173 Q 222.5 171 232 173 C 233 179, 212 179, 213 173 Z" fill="#3a1010" stroke="#9e5b4f" stroke-width="1.8"/>
+          <line x1="215" y1="173.5" x2="230" y2="173.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
