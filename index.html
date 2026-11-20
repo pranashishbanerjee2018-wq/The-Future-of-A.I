@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE FUTURE OF ARTIFICIAL INTELLIGENCE | Academic Research Presentation</title>
+  
+  <!-- CSS Stylesheets (Relative Paths for GitHub Pages Compatibility) -->
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/animations.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+</head>
+<body class="theme-dark">
+
+  <!-- Fullscreen 16:9 Presentation Stage Wrapper -->
+  <main id="presentation-viewport">
+    <div id="aspect-ratio-container" class="aspect-16-9">
+      
+      <!-- LAYER 1: Ambient Lab Background & SVG Scenery -->
+      <div id="scene-background-layer" class="viewport-layer cam-default">
+        <!-- SVG Lab Scenery injected dynamically -->
+        <object id="lab-scenery-svg" type="image/svg+xml" data="static/images/lab_background.svg" aria-label="Futuristic AI Research Laboratory"></object>
+        
+        <!-- Live Particle Canvas for Ambient Floating Data Elements -->
+        <canvas id="ambient-particles-canvas"></canvas>
+      </div>
+
+      <!-- LAYER 2: Dynamic Holographic HUD Overlays for Scenes -->
+      <div id="hud-overlays-layer" class="viewport-layer pointer-events-none">
+        
+        <!-- Scene 2: Neural Architecture Overlay -->
+        <div id="hud-neural" class="scene-hud-panel hidden">
+          <div class="hud-badge">DEEP LEARNING // LATENT TOPOLOGY</div>
+          <div class="neural-pulse-graph">
+            <div class="node-layer input-layer">
+              <span class="n-node pulse-c1"></span>
+              <span class="n-node pulse-c1"></span>
+              <span class="n-node pulse-c1"></span>
+            </div>
+            <div class="layer-connector-lines"></div>
+            <div class="node-layer hidden-layer-1">
+              <span class="n-node pulse-c2"></span>
+              <span class="n-node pulse-c2"></span>
+              <span class="n-node pulse-c2"></span>
+              <span class="n-node pulse-c2"></span>
+            </div>
+            <div class="node-layer hidden-layer-2">
+              <span class="n-node pulse-c3"></span>
+              <span class="n-node pulse-c3"></span>
+              <span class="n-node pulse-c3"></span>
+            </div>
+            <div class="node-layer output-layer">
+              <span class="n-node pulse-c4"></span>
+            </div>
+          </div>
+          <div class="hud-stats">PARAMETERS: 175 BILLION | ATTENTION HEADS: 96</div>
+        </div>
+
+        <!-- Scene 3: Real World Domain Overlays -->
+        <div id="hud-real-world" class="scene-hud-panel hidden">
+          <div class="realworld-grid">
+            <div class="rw-card card-health">
+              <div class="rw-icon">🧬</div>
+              <div class="rw-title">Precision Healthcare</div>
+              <div class="rw-desc">Genomic sequencing &amp; predictive oncology</div>
+              <div class="rw-bar"><div class="rw-fill fill-health"></div></div>
+            </div>
+            <div class="rw-card card-robotics">
+              <div class="rw-icon">🤖</div>
+              <div class="rw-title">Autonomous Robotics</div>
+              <div class="rw-desc">Sub-millisecond kinematic actuation</div>
+              <div class="rw-bar"><div class="rw-fill fill-robotics"></div></div>
+            </div>
+            <div class="rw-card card-science">
+              <div class="rw-icon">⚛️</div>
+              <div class="rw-title">Scientific Discovery</div>
+              <div class="rw-desc">De novo protein folding &amp; quantum modeling</div>
+              <div class="rw-bar"><div class="rw-fill fill-science"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scene 5: Future AI Paradigms Overlay -->
+        <div id="hud-future" class="scene-hud-panel hidden">
+          <div class="future-hologram-ring">
+            <div class="ring-core">
+              <div class="core-title">EMBODIED COGNITION</div>
+              <div class="core-sub">NEURO-SYMBOLIC HYBRID REASONING</div>
+            </div>
+            <div class="orbit-node node-a">Collab Agents</div>
+            <div class="orbit-node node-b">Neuromorphic</div>
+            <div class="orbit-node node-c">Self-Supervised</div>
+          </div>
+        </div>
+
+        <!-- Scene 6: Ethics and Governance Overlay -->
+        <div id="hud-ethics" class="scene-hud-panel hidden">
+          <div class="ethics-shield-container">
+            <div class="shield-glyph">🛡️</div>
+            <div class="ethics-pillars">
+              <div class="pillar-item"><span class="check-icon">✓</span> Algorithmic Transparency</div>
+              <div class="pillar-item"><span class="check-icon">✓</span> Bias Mitigation &amp; Fairness</div>
+              <div class="pillar-item"><span class="check-icon">✓</span> Verifiable Safety &amp; Alignment</div>
+              <div class="pillar-item"><span class="check-icon">✓</span> Continuous Human Oversight</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LAYER 3: 2D Vector Characters Stage -->
+      <div id="characters-stage-layer" class="viewport-layer">
+        
+        <!-- Character A: Senior Researcher (Left-Center) -->
+        <div id="char-senior-container" class="character-slot active-speaker">
+          <div class="speaker-glow senior-glow"></div>
+          <div class="character-svg-wrapper">
+            <!-- Senior Researcher Inline SVG for Real-Time Lip-Sync & Articulated Gestures -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800" width="100%" height="100%" id="svg-senior">
+              <defs>
+                <linearGradient id="hairGradA" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2a231d"/>
+                  <stop offset="100%" stop-color="#14100c"/>
+                </linearGradient>
+                <linearGradient id="skinGradA" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#f8d5bb"/>
+                  <stop offset="100%" stop-color="#e2ba9b"/>
+                </linearGradient>
+                <linearGradient id="coatGradA" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#152238"/>
+                  <stop offset="50%" stop-color="#0f1929"/>
+                  <stop offset="100%" stop-color="#090f19"/>
+                </linearGradient>
+                <linearGradient id="lapelGradA" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#1e3252"/>
+                  <stop offset="100%" stop-color="#111d30"/>
+                </linearGradient>
+                <filter id="charShadowA" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+                </filter>
+              </defs>
+
+              <g id="character-a-root" filter="url(#charShadowA)">
+                <!-- Lower Body / Trousers & Shoes -->
+                <g id="senior-legs">
+                  <path d="M 175 480 L 170 760 L 210 760 L 218 510 L 226 510 L 235 760 L 275 760 L 270 480 Z" fill="#0d141f" stroke="#060a10" stroke-width="1.5"/>
+                  <path d="M 160 755 L 215 755 L 215 778 L 155 778 Z" fill="#05070a"/>
+                  <path d="M 230 755 L 285 755 L 290 778 L 230 778 Z" fill="#05070a"/>
+                </g>
+
+                <!-- Torso & Navy Lab Attire -->
+                <g id="senior-torso">
+                  <path d="M 140 230 C 140 230, 220 215, 305 230 C 325 310, 335 410, 330 520 C 330 520, 220 540, 115 520 C 110 410, 120 310, 140 230 Z" fill="url(#coatGradA)" stroke="#1f375b" stroke-width="1.8"/>
+                  <path d="M 195 225 L 250 225 L 235 320 L 210 320 Z" fill="#eaf0f8"/>
+                  <polygon points="218,235 227,235 231,315 222.5,335 214,315" fill="#0055aa" stroke="#003366" stroke-width="1"/>
+                  <polygon points="175,225 215,350 185,360 155,240" fill="url(#lapelGradA)" stroke="#264470" stroke-width="1.2"/>
+                  <polygon points="270,225 230,350 260,360 290,240" fill="url(#lapelGradA)" stroke="#264470" stroke-width="1.2"/>
+
+                  <!-- Digital Lab Access Badge -->
+                  <g transform="translate(155, 290)">
+                    <rect width="28" height="42" rx="3" fill="#071224" stroke="#00d4ff" stroke-width="1"/>
+                    <rect x="4" y="5" width="20" height="15" fill="#00d4ff" opacity="0.6"/>
+                    <line x1="4" y1="26" x2="24" y2="26" stroke="#ffffff" stroke-width="1.2"/>
+                    <line x1="4" y1="32" x2="18" y2="32" stroke="#ffffff" stroke-width="1"/>
+                  </g>
+                </g>
+
+                <!-- Arms & Articulable Gestures -->
+                <g id="senior-arms-container">
+                  <g id="senior-left-arm" class="arm-joint-left gesture-rest">
+                    <path d="M 140 240 C 115 320, 105 380, 115 440 L 140 440 C 130 380, 138 320, 158 250 Z" fill="url(#coatGradA)" stroke="#1f375b" stroke-width="1.5"/>
+                    <g id="senior-left-hand" class="hand-joint-left">
+                      <ellipse cx="125" cy="455" rx="14" ry="16" fill="url(#skinGradA)"/>
+                    </g>
+                  </g>
+
+                  <g id="senior-right-arm" class="arm-joint-right gesture-rest">
+                    <path d="M 305 240 C 330 290, 345 330, 350 350 L 325 358 C 320 330, 310 290, 290 255 Z" fill="url(#coatGradA)" stroke="#1f375b" stroke-width="1.5"/>
+                    <g id="senior-right-forearm" class="forearm-joint-right">
+                      <path d="M 350 350 C 362 385, 372 415, 375 422 L 350 432 C 345 415, 335 385, 325 358 Z" fill="url(#coatGradA)" stroke="#1f375b" stroke-width="1.5"/>
+                      <ellipse cx="362" cy="425" rx="14" ry="7" fill="#1e3252"/>
+                      <g id="senior-right-hand" class="hand-joint-right">
+                        <ellipse cx="370" cy="432" rx="12" ry="14" fill="url(#skinGradA)"/>
+                        <path d="M 360 426 Q 352 422 350 416 Q 354 412 362 420 Z" fill="url(#skinGradA)"/>
+                        <path id="senior-finger-index" d="M 367 422 L 372 398 Q 375 396 378 398 L 375 422 Z" fill="url(#skinGradA)"/>
+                        <path id="senior-finger-middle" d="M 374 423 L 380 400 Q 383 398 386 400 L 381 424 Z" fill="url(#skinGradA)"/>
+                        <path id="senior-finger-ring" d="M 379 425 L 386 406 Q 389 405 391 408 L 385 427 Z" fill="url(#skinGradA)"/>
+                        <path id="senior-finger-pinky" d="M 383 428 L 391 414 Q 393 413 394 416 L 387 431 Z" fill="url(#skinGradA)"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Head, Neck, Face & Hair (30-year-old Senior Researcher) -->
+                <g id="senior-head-group" class="head-joint">
+                  <polygon points="205,200 240,200 245,235 200,235" fill="url(#skinGradA)"/>
+                  <path d="M 185 130 C 185 75, 260 75, 260 130 C 260 175, 250 215, 222.5 215 C 195 215, 185 175, 185 130 Z" fill="url(#skinGradA)" stroke="#cfa687" stroke-width="1"/>
+                  <ellipse cx="184" cy="142" rx="7" ry="12" fill="url(#skinGradA)"/>
+                  <ellipse cx="261" cy="142" rx="7" ry="12" fill="url(#skinGradA)"/>
+                  <path d="M 180 120 C 175 70, 220 50, 260 65 C 275 72, 270 100, 265 115 C 255 85, 235 75, 205 85 C 190 90, 185 105, 180 120 Z" fill="url(#hairGradA)"/>
+                  <path d="M 180 105 C 195 70, 245 60, 265 80" stroke="#3d322a" stroke-width="2.5" fill="none"/>
+                  <path d="M 195 125 Q 206 122 216 126" stroke="#2a231d" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+                  <path d="M 229 126 Q 239 122 250 125" stroke="#2a231d" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+
+                  <g id="senior-eyes" class="character-eyes">
+                    <ellipse cx="206" cy="136" rx="6" ry="4.5" fill="#ffffff"/>
+                    <circle cx="206.5" cy="136" r="3" fill="#302015"/>
+                    <circle cx="208" cy="134.5" r="1.2" fill="#ffffff"/>
+                    <ellipse cx="239" cy="136" rx="6" ry="4.5" fill="#ffffff"/>
+                    <circle cx="238.5" cy="136" r="3" fill="#302015"/>
+                    <circle cx="240" cy="134.5" r="1.2" fill="#ffffff"/>
+                  </g>
+
+                  <path d="M 222.5 136 L 220 156 L 226 156" stroke="#b88f70" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+                  <!-- 5-State Phoneme-Synchronized Mouth System -->
+                  <g id="senior-mouth" class="mouth-group phoneme-rest">
+                    <path class="mouth-shape-rest" d="M 213 175 Q 222.5 178 232 175" stroke="#9e5b4f" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+                    <g class="mouth-shape-open">
+                      <path d="M 212 172 Q 222.5 168 233 172 C 235 186, 210 186, 212 172 Z" fill="#3a1010" stroke="#9e5b4f" stroke-width="1.8"/>
+                      <path d="M 215 172 Q 222.5 174 230 172" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                      <ellipse cx="222.5" cy="182" rx="5" ry="2" fill="#882222" opacity="0.8"/>
+                    </g>
+                    <g class="mouth-shape-round">
+                      <ellipse cx="222.5" cy="176" rx="6.5" ry="7.5" fill="#3a1010" stroke="#9e5b4f" stroke-width="2"/>
+                      <ellipse cx="222.5" cy="173" rx="4" ry="1.5" fill="#ffffff" opacity="0.9"/>
+                    </g>
+                    <g class="mouth-shape-wide">
+                      <path d="M 211 174 Q 222.5 171 234 174 C 235 180, 210 180, 211 174 Z" fill="#3a1010" stroke="#9e5b4f" stroke-width="1.8"/>
+                      <line x1="214" y1="174" x2="231" y2="174" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+                    <g class="mouth-shape-mid">
+                      <path d="M 213 173 Q 222.5 171 232 173 C 233 179, 212 179, 213 173 Z" fill="#3a1010" stroke="#9e5b4f" stroke-width="1.8"/>
+                      <line x1="215" y1="173.5" x2="230" y2="173.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="char-id-tag tag-senior">
+            <span class="tag-name">Dr. Alexander Thorne</span>
+            <span class="tag-title">Senior AI Researcher</span>
+          </div>
+        </div>
+
+        <!-- Character B: Junior Researcher (Right-Center) -->
+        <div id="char-junior-container" class="character-slot listening">
+          <div class="speaker-glow junior-glow"></div>
+          <div class="character-svg-wrapper">
+            <!-- Junior Researcher Inline SVG for Real-Time Lip-Sync & Articulated Gestures -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 800" width="100%" height="100%" id="svg-junior">
+              <defs>
+                <linearGradient id="hairGradB" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#402e1c"/>
+                  <stop offset="100%" stop-color="#24180d"/>
+                </linearGradient>
+                <linearGradient id="skinGradB" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#fbe0cb"/>
+                  <stop offset="100%" stop-color="#e8c2a7"/>
+                </linearGradient>
+                <linearGradient id="shirtGradB" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2979ff"/>
+                  <stop offset="60%" stop-color="#1565c0"/>
+                  <stop offset="100%" stop-color="#0d47a1"/>
+                </linearGradient>
+                <linearGradient id="tabletGlassB" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#2979ff" stop-opacity="0.4"/>
+                </linearGradient>
+                <filter id="juniorGlowB" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#00e5ff" flood-opacity="0.6"/>
+                </filter>
+                <filter id="charShadowB" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+                </filter>
+              </defs>
+
+              <g id="character-b-root" filter="url(#charShadowB)">
+                <!-- Lower Body / Trousers & Casual Boots -->
+                <g id="junior-legs">
+                  <path d="M 180 490 L 175 760 L 212 760 L 220 520 L 228 520 L 235 760 L 272 760 L 268 490 Z" fill="#141a24" stroke="#080c12" stroke-width="1.5"/>
+                  <path d="M 165 755 L 216 755 L 216 778 L 160 778 Z" fill="#1a1c22"/>
+                  <path d="M 230 755 L 282 755 L 286 778 L 230 778 Z" fill="#1a1c22"/>
+                </g>
+
+                <!-- Torso & Blue Professional Shirt -->
+                <g id="junior-torso">
+                  <path d="M 155 240 C 155 240, 222 228, 290 240 C 308 310, 312 410, 305 500 C 305 500, 222 515, 140 500 C 135 410, 142 310, 155 240 Z" fill="url(#shirtGradB)" stroke="#1565c0" stroke-width="1.8"/>
+                  <polygon points="190,230 222,260 210,265 180,240" fill="#1e88e5" stroke="#0d47a1" stroke-width="1.2"/>
+                  <polygon points="255,230 222,260 234,265 265,240" fill="#1e88e5" stroke="#0d47a1" stroke-width="1.2"/>
+                  <line x1="222" y1="260" x2="222" y2="495" stroke="#0d47a1" stroke-width="2"/>
+                  <circle cx="222" cy="285" r="2.5" fill="#ffffff" opacity="0.8"/>
+                  <circle cx="222" cy="335" r="2.5" fill="#ffffff" opacity="0.8"/>
+                  <circle cx="222" cy="385" r="2.5" fill="#ffffff" opacity="0.8"/>
+                  <circle cx="222" cy="435" r="2.5" fill="#ffffff" opacity="0.8"/>
+                </g>
+
+                <!-- Arms & Articulable Tablet/Stylus Gestures -->
+                <g id="junior-arms-container">
+                  <g id="junior-left-arm" class="tablet-arm-group gesture-rest">
+                    <path d="M 155 245 C 130 310, 125 365, 140 430 L 165 425 C 155 375, 158 325, 175 255 Z" fill="url(#shirtGradB)" stroke="#1565c0" stroke-width="1.5"/>
+                    <ellipse cx="140" cy="425" rx="14" ry="7" fill="#1e88e5"/>
+                    <path d="M 135 430 L 185 450 L 195 440 L 145 420 Z" fill="url(#skinGradB)"/>
+                    <ellipse cx="190" cy="450" rx="12" ry="10" fill="url(#skinGradB)"/>
+                    <g id="hologram-tablet" transform="translate(170, 400)">
+                      <polygon points="0,20 80,0 85,60 5,80" fill="url(#tabletGlassB)" stroke="#00e5ff" stroke-width="1.5" filter="url(#juniorGlowB)"/>
+                      <polyline points="15,45 35,32 55,48 75,25" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+                    </g>
+                  </g>
+
+                  <g id="junior-right-arm" class="arm-joint-right gesture-rest">
+                    <path d="M 290 245 C 312 295, 322 340, 324 365 L 298 370 C 295 340, 288 300, 275 255 Z" fill="url(#shirtGradB)" stroke="#1565c0" stroke-width="1.5"/>
+                    <ellipse cx="310" cy="368" rx="14" ry="7" fill="#1e88e5"/>
+                    <g id="junior-right-forearm" class="forearm-joint-right">
+                      <path d="M 312 370 C 318 395, 322 420, 320 435 L 296 432 C 298 415, 298 390, 296 372 Z" fill="url(#skinGradB)"/>
+                      <g id="junior-right-hand" class="hand-joint-right">
+                        <ellipse cx="308" cy="442" rx="12" ry="14" fill="url(#skinGradB)"/>
+                        <line id="junior-stylus" x1="285" y1="455" x2="250" y2="440" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" filter="url(#juniorGlowB)"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+
+                <!-- Head, Neck, Face & Hair (23-year-old Junior Researcher) -->
+                <g id="junior-head-group" class="head-joint">
+                  <polygon points="208,205 237,205 242,238 203,238" fill="url(#skinGradB)"/>
+                  <path d="M 188 135 C 188 80, 257 80, 257 135 C 257 175, 248 215, 222.5 215 C 197 215, 188 175, 188 135 Z" fill="url(#skinGradB)" stroke="#d9b193" stroke-width="1"/>
+                  <ellipse cx="187" cy="146" rx="6.5" ry="11" fill="url(#skinGradB)"/>
+                  <ellipse cx="258" cy="146" rx="6.5" ry="11" fill="url(#skinGradB)"/>
+                  <path d="M 182 125 C 178 72, 220 52, 262 68 C 275 75, 272 105, 266 122 C 258 90, 242 78, 215 80 C 196 82, 188 102, 182 125 Z" fill="url(#hairGradB)"/>
+                  <path d="M 185 110 C 205 75, 250 70, 268 90" stroke="#523c26" stroke-width="2.2" fill="none"/>
+                  <path d="M 197 127 Q 207 124 217 127" stroke="#402e1c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+                  <path d="M 228 125 Q 238 119 248 123" stroke="#402e1c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+                  <g id="junior-eyes" class="character-eyes">
+                    <ellipse cx="207" cy="138" rx="6" ry="4.5" fill="#ffffff"/>
+                    <circle cx="207.5" cy="138" r="3" fill="#1b4570"/>
+                    <circle cx="209" cy="136.5" r="1.2" fill="#ffffff"/>
+                    <ellipse cx="238" cy="138" rx="6" ry="4.5" fill="#ffffff"/>
+                    <circle cx="237.5" cy="138" r="3" fill="#1b4570"/>
+                    <circle cx="239" cy="136.5" r="1.2" fill="#ffffff"/>
+                  </g>
+
+                  <path d="M 222.5 138 L 221 157 L 226 157" stroke="#bf9473" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+
+                  <!-- 5-State Phoneme-Synchronized Mouth System -->
+                  <g id="junior-mouth" class="mouth-group phoneme-rest">
+                    <path class="mouth-shape-rest" d="M 214 176 Q 222.5 179 231 176" stroke="#a86355" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+                    <g class="mouth-shape-open">
+                      <path d="M 213 173 Q 222.5 169 232 173 C 234 186, 211 186, 213 173 Z" fill="#3a1010" stroke="#a86355" stroke-width="1.8"/>
+                      <path d="M 215.5 173 Q 222.5 175 229.5 173" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                      <ellipse cx="222.5" cy="182" rx="4.5" ry="1.8" fill="#882222" opacity="0.8"/>
+                    </g>
+                    <g class="mouth-shape-round">
+                      <ellipse cx="222.5" cy="177" rx="6.2" ry="7.2" fill="#3a1010" stroke="#a86355" stroke-width="2"/>
+                      <ellipse cx="222.5" cy="174" rx="3.8" ry="1.5" fill="#ffffff" opacity="0.9"/>
+                    </g>
+                    <g class="mouth-shape-wide">
+                      <path d="M 212 175 Q 222.5 172 233 175 C 234 181, 211 181, 212 175 Z" fill="#3a1010" stroke="#a86355" stroke-width="1.8"/>
+                      <line x1="215" y1="175" x2="230" y2="175" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+                    <g class="mouth-shape-mid">
+                      <path d="M 214 174 Q 222.5 172 231 174 C 232 180, 213 180, 214 174 Z" fill="#3a1010" stroke="#a86355" stroke-width="1.8"/>
+                      <line x1="216" y1="174.5" x2="229" y2="174.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="char-id-tag tag-junior">
+            <span class="tag-name">Marcus Vance</span>
+            <span class="tag-title">Junior AI Researcher</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LAYER 4: MATLAB Scientific Experiment Demonstration Panel (Scene 4) -->
+      <div id="matlab-scientific-modal" class="scientific-panel hidden">
+        <div class="matlab-hud-frame">
+          <!-- Window Header -->
+          <div class="matlab-header">
+            <div class="matlab-badge-group">
+              <span class="matlab-logo-icon">🧮</span>
+              <span class="matlab-title">MATLAB KERNEL // FutureAI.m</span>
+              <span id="matlab-live-status-pill" class="status-pill status-ready">ENGINE READY</span>
+            </div>
+            <div class="matlab-header-actions">
+              <button id="btn-rerun-matlab-demo" class="hud-action-btn" title="Re-run Live MATLAB Batch">
+                <span class="action-icon">⚡</span> Run Subprocess
+              </button>
+            </div>
+          </div>
+
+          <!-- Execution Banner / Terminal Output Drawer -->
+          <div id="matlab-execution-banner" class="exec-banner">
+            <span class="spinner-icon">⚙️</span>
+            <span id="matlab-exec-message">MATLAB Batch Execution in Progress...</span>
+          </div>
+
+          <!-- Main Scientific Content Grid -->
+          <div class="matlab-body-grid">
+            <!-- Left: Decision Boundary Graph -->
+            <div class="matlab-visual-card">
+              <div class="card-caption">FIGURE 1: SUPERVISED KNN DECISION MANIFOLD</div>
+              <div class="graph-img-wrapper">
+                <img id="matlab-img-boundary" src="results/matlab_decision_boundary.png" alt="MATLAB Decision Boundary Plot" class="scientific-plot-img">
+              </div>
+            </div>
+
+            <!-- Right: Performance Metrics & Confusion Matrix -->
+            <div class="matlab-visual-card">
+              <div class="card-caption">FIGURE 2: VALIDATION CONFUSION MATRIX &amp; METRICS</div>
+              <div class="graph-img-wrapper">
+                <img id="matlab-img-metrics" src="results/matlab_performance_metrics.png" alt="MATLAB Performance Metrics" class="scientific-plot-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Quantitative Data Strip -->
+          <div class="matlab-metrics-strip">
+            <div class="metric-box">
+              <div class="m-label">CLASSIFIER MODEL</div>
+              <div id="res-model-name" class="m-val text-cyan">k-NN (k=3)</div>
+            </div>
+            <div class="metric-box">
+              <div class="m-label">MEASURED ACCURACY</div>
+              <div id="res-accuracy-val" class="m-val text-green">98.33%</div>
+            </div>
+            <div class="metric-box">
+              <div class="m-label">PRECISION</div>
+              <div id="res-precision-val" class="m-val text-purple">0.9677</div>
+            </div>
+            <div class="metric-box">
+              <div class="m-label">RECALL</div>
+              <div id="res-recall-val" class="m-val text-blue">1.0000</div>
+            </div>
+            <div class="metric-box">
+              <div class="m-label">F1-SCORE</div>
+              <div id="res-f1-val" class="m-val text-gold">0.9836</div>
+            </div>
+            <div class="metric-box">
+              <div class="m-label">TOTAL OBSERVATIONS</div>
+              <div id="res-samples-val" class="m-val">200 Samples (60 Test)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAYER 5: Visual Novel Subtitles & Dialogue Bar -->
+      <div id="dialogue-subtitles-bar" class="subtitles-container">
+        <div class="speaker-label-chip">
+          <span id="subtitles-speaker-indicator" class="speaker-dot"></span>
+          <span id="subtitles-speaker-name" class="speaker-text">Dr. Alexander Thorne</span>
+          <span id="subtitles-speaker-role" class="speaker-subtext">Senior AI Researcher</span>
+        </div>
+        <div id="subtitles-content" class="dialogue-speech-text">
+          Loading presentation sequence...
+        </div>
+        <div class="speech-audio-indicator">
+          <span class="wave-bar wb-1"></span>
+          <span class="wave-bar wb-2"></span>
+          <span class="wave-bar wb-3"></span>
+          <span class="wave-bar wb-4"></span>
+        </div>
+      </div>
+
+      <!-- LAYER 6: Opening Curtain & Title Screen -->
+      <div id="title-intro-curtain" class="intro-curtain">
+        <div class="intro-glass-card">
+          <div class="lab-emblem">🔬 AI RESEARCH LAB</div>
+          <h1 class="project-title">THE FUTURE OF ARTIFICIAL INTELLIGENCE</h1>
+          <h2 class="project-subtitle">A Journey Through Innovation, Intelligence and Technology</h2>
+          
+          <div class="intro-meta-box">
+            <div class="meta-row"><span class="meta-lbl">FORMAT:</span> Cinematic 2D Vector Animated Presentation</div>
+            <div class="meta-row"><span class="meta-lbl">DURATION:</span> 2m 45s (Strict &lt; 3:00 Target)</div>
+            <div class="meta-row"><span class="meta-lbl">SCIENTIFIC ENGINE:</span> MathWorks MATLAB Desktop Subprocess (FutureAI.m)</div>
+            <div class="meta-row"><span class="meta-lbl">CHARACTERS:</span> Dr. Alexander Thorne (Senior) &amp; Marcus Vance (Junior)</div>
+          </div>
+
+          <div class="intro-actions">
+            <button id="btn-start-presentation" class="primary-pulse-btn">
+              <span class="play-triangle">▶</span> START PRESENTATION
+            </button>
+            <button id="btn-open-diagnostics" class="secondary-glass-btn">
+              <span>🛠️</span> MATLAB Diagnostics
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAYER 7: Closing Academic Credits Slate (Scene 7 Ending) -->
+      <div id="credits-slate" class="credits-overlay hidden">
+        <div class="credits-glass-card">
+          <div class="credits-quote">
+            “The future of Artificial Intelligence is not simply about creating smarter machines.<br>
+            It is about building technology that helps humanity move forward.”
+          </div>
+
+          <div class="credits-divider"></div>
+
+          <h3 class="credits-head">THE FUTURE OF ARTIFICIAL INTELLIGENCE</h3>
+          <p class="credits-author">Academic Research Project // 2026–2027</p>
+
+          <div class="credits-specs-grid">
+            <div class="c-spec-card">
+              <div class="c-spec-title">2D Vector Animation</div>
+              <div class="c-spec-val">SVG Morphing &amp; Real-Time Lip-Sync</div>
+            </div>
+            <div class="c-spec-card">
+              <div class="c-spec-title">MATLAB Integration</div>
+              <div class="c-spec-val">Subprocess Batch Execution &amp; Artifact Verification</div>
+            </div>
+            <div class="c-spec-card">
+              <div class="c-spec-title">Speech Engine</div>
+              <div class="c-spec-val">Dual Voice Profiling &amp; Timed Synthesizer</div>
+            </div>
+            <div class="c-spec-card">
+              <div class="c-spec-title">Strict Duration</div>
+              <div class="c-spec-val">Target 2m 45s (Never Exceeds 3m)</div>
+            </div>
+          </div>
+
+          <div class="credits-actions">
+            <button id="btn-replay-presentation" class="primary-pulse-btn">
+              <span>🔄</span> REPLAY PRESENTATION
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAYER 8: Persistent Playback HUD Controls (Bottom Strip) -->
+      <footer id="presentation-controls-strip">
+        <!-- Play / Pause / Restart Buttons -->
+        <div class="control-group-left">
+          <button id="ctrl-play-pause" class="ctrl-btn" title="Pause / Resume">
+            <span id="ctrl-play-pause-icon">⏸</span>
+          </button>
+          <button id="ctrl-restart" class="ctrl-btn" title="Restart from Beginning">
+            <span>⏮</span>
+          </button>
+          <div class="time-readout">
+            <span id="time-current">00:00</span> / <span id="time-total">02:45</span>
+          </div>
+        </div>
+
+        <!-- Timeline Progress Bar -->
+        <div class="control-group-center">
+          <div id="timeline-scrubber" class="timeline-bar">
+            <div id="timeline-progress-fill" class="timeline-fill"></div>
+            <!-- Scene Checkpoints -->
+            <div class="scene-markers">
+              <span class="s-marker" style="left: 0%;" title="Scene 1: Lab Intro"></span>
+              <span class="s-marker" style="left: 13.3%;" title="Scene 2: Evolution"></span>
+              <span class="s-marker" style="left: 27.8%;" title="Scene 3: Real World"></span>
+              <span class="s-marker" style="left: 43.6%;" title="Scene 4: MATLAB Demo"></span>
+              <span class="s-marker" style="left: 63.0%;" title="Scene 5: Future AI"></span>
+              <span class="s-marker" style="left: 77.5%;" title="Scene 6: Ethics"></span>
+              <span class="s-marker" style="left: 92.1%;" title="Scene 7: Conclusion"></span>
+            </div>
+          </div>
+          <div id="scene-title-badge" class="scene-badge">Scene 1: The AI Research Lab</div>
+        </div>
+
+        <!-- Toggles & Navigator -->
+        <div class="control-group-right">
+          <select id="scene-jump-selector" class="ctrl-dropdown" title="Jump to Scene">
+            <option value="1">Scene 1: The AI Research Lab</option>
+            <option value="2">Scene 2: The Evolution of AI</option>
+            <option value="3">Scene 3: AI in the Real World</option>
+            <option value="4">Scene 4: MATLAB Demonstration</option>
+            <option value="5">Scene 5: The Future of AI</option>
+            <option value="6">Scene 6: Ethics &amp; Responsibility</option>
+            <option value="7">Scene 7: Conclusion &amp; Credits</option>
+          </select>
+
+          <button id="ctrl-subtitles" class="ctrl-btn active" title="Toggle Subtitles">
+            <span>💬</span>
+          </button>
+          <button id="ctrl-audio" class="ctrl-btn active" title="Toggle Sound">
+            <span id="ctrl-audio-icon">🔊</span>
+          </button>
+          <button id="ctrl-matlab-test" class="ctrl-btn" title="MATLAB Diagnostics">
+            <span>⚙️</span>
+          </button>
+          <button id="ctrl-fullscreen" class="ctrl-btn" title="Toggle Fullscreen">
+            <span>⛶</span>
+          </button>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- MODAL: MATLAB Diagnostics and Configuration Panel -->
+  <div id="diagnostics-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>MATLAB Engine Diagnostics &amp; Configuration</h3>
+        <button id="btn-close-diagnostics" class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="diag-status-row">
+          <span class="diag-label">Detection Status:</span>
+          <span id="diag-status-badge" class="diag-pill">Checking...</span>
+        </div>
+        <div class="diag-status-row">
+          <span class="diag-label">Executable Location:</span>
+          <code id="diag-detected-path" class="diag-code">None detected in system PATH</code>
+        </div>
+        <div class="diag-status-row">
+          <span class="diag-label">Engine Script:</span>
+          <code class="diag-code">FutureAI.m (Base MATLAB syntax; no toolboxes required)</code>
+        </div>
+
+        <div class="diag-config-box">
+          <label for="custom-matlab-path-input">Custom MATLAB Executable Path (Optional):</label>
+          <div class="input-btn-row">
+            <input type="text" id="custom-matlab-path-input" placeholder="C:\Program Files\MATLAB\R2024b\bin\matlab.exe">
+            <button id="btn-save-matlab-path" class="secondary-btn">Save Path</button>
+          </div>
+          <p class="diag-hint">If MATLAB is installed in a non-standard directory, paste the path to <code>matlab.exe</code> above.</p>
+        </div>
+
+        <div class="diag-guide-box">
+          <h4>MATLAB Integration Guide</h4>
+          <ul>
+            <li><strong>Command Executed:</strong> <code>matlab -batch "FutureAI"</code> (Subprocess batch mode).</li>
+            <li><strong>Reproducibility:</strong> Seed <code>rng(42, 'twister')</code> guarantees exact scientific replicability.</li>
+            <li><strong>Output Verification:</strong> Checks that PNG plots and numerical JSON are produced before responding.</li>
+            <li><strong>Standalone Baseline:</strong> An authoritative verified baseline is pre-generated so the project functions seamlessly on any PC.</li>
+          </ul>
+        </div>
+
+        <div class="diag-terminal-box">
+          <div class="term-head">Subprocess Log / Stdout Output:</div>
+          <pre id="diag-stdout-terminal">Click "Run MATLAB Subprocess Test" to capture live process output.</pre>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-test-matlab-subprocess" class="primary-btn">⚡ Run MATLAB Subprocess Test</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Elements -->
+  <audio id="audio-ambient-loop" src="static/audio/ambient_lab.wav" loop preload="auto"></audio>
+  <audio id="audio-compute-scan" src="static/audio/compute_scan.wav" preload="auto"></audio>
+  <audio id="audio-ui-chime" src="static/audio/ui_chime.wav" preload="auto"></audio>
+
+  <!-- JavaScript Modules -->
+  <script src="static/js/speech.js"></script>
+  <script src="static/js/matlab_viewer.js"></script>
+  <script src="static/js/lab_effects.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+</html>
